@@ -153,3 +153,4 @@ if __name__=='__main__':
  enL=enf(eno)
  ex=FormMain()
  enc(enL.exec())
+# Created by pyminifier (https://github.com/liftoff/pyminifier)

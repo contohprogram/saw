@@ -53,7 +53,7 @@ class ZxDFgrt(umK):
   ume.tPPp.setObjectName("tPPp")
   ume.labelPesan=umL(umz)
   ume.labelPesan.setGeometry(umT(20,110,251,16))
-  ume.labelPesan.setText("")
+  ume.labelPesan.setText("username : admin, password : 123")
   ume.labelPesan.setObjectName("labelPesan")
   ume.blN.clicked.connect(ume.umf)
   ume.bXX.clicked.connect(ume.umn)

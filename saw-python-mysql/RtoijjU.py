@@ -5,6 +5,7 @@ srx=print
 srP=len
 srX=int
 srR=QtWidgets.QApplication
+wek=QtWidgets.QMessageBox
 srU=QtWidgets.QTableWidgetItem
 srt=QtWidgets.QComboBox
 srG=QtWidgets.QLineEdit
@@ -161,39 +162,30 @@ class RtoijjU(sre):
    srT.aaSSdFF.setCurrentIndex(srS)
   srT.oWerrT.setText(srT.xxDghj.item(srX(srY),3).text())
  def srL(srT):
-  db=sra(srN,sro,srl,srD)
-  srE=db.cursor()
-  srz="insert into alternatif_kriteria(id_alternatif,             id_kriteria, nilai)             values ('%s', '%s', '%s')"% (srT.list_id_alternatif[srT.uRTIo.currentIndex()],srT.list_id_kriteria[srT.aaSSdFF.currentIndex()],srT.oWerrT.text())
-  try:
-   srE.execute(srz)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   srT.srI()
   srT.srW()
  def sru(srT):
-  db=sra(srN,sro,srl,srD)
-  srE=db.cursor()
-  srz="update alternatif_kriteria set id_alternatif = '%s', id_kriteria = '%s',             nilai = '%s' where id_alternatif_kriteria = '%s'"% (srT.list_id_alternatif[srT.uRTIo.currentIndex()],srT.list_id_kriteria[srT.aaSSdFF.currentIndex()],srT.oWerrT.text(),srT.id_alternatif_kriteria)
-  try:
-   srE.execute(srz)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   srT.srI()
   srT.srW()
  def srp(srT):
-  db=sra(srN,sro,srl,srD)
-  srE=db.cursor()
-  srz="delete from alternatif_kriteria where id_alternatif_kriteria = '%s'"% (srT.id_alternatif_kriteria)
-  try:
-   srE.execute(srz)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   srT.srI()
   srT.srW()
  def srI(srT):

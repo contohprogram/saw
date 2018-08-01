@@ -5,6 +5,7 @@ ocW=str
 ocf=print
 ocj=int
 ocC=QtWidgets.QApplication
+wek=QtWidgets.QMessageBox
 och=QtWidgets.QTableWidgetItem
 ocK=QtWidgets.QComboBox
 ocq=QtWidgets.QPushButton
@@ -125,39 +126,29 @@ class DFrtyuw(ocl):
   if ocd>=0:
    ocm.cGrtos.setCurrentIndex(ocd)
  def ocE(ocm):
-  db=ocL(ocJ,ocM,ocT,ocS)
-  ocR=db.cursor()
-  ocx="insert into kriteria(nama_kriteria,                 kepentingan, costbenefit)                 values ('%s', '%s', '%s')"% (ocm.txRmt.text(),ocm.jjUrts.text(),ocW(ocm.cGrtos.currentText()))
-  try:
-   ocR.execute(ocx)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   ocm.oce()
  def ocv(ocm):
-  db=ocL(ocJ,ocM,ocT,ocS)
-  ocR=db.cursor()
-  ocx="update kriteria set nama_kriteria = '%s',             kepentingan = '%s', costbenefit = '%s' where id_kriteria = '%s'"% (ocm.txRmt.text(),ocm.jjUrts.text(),ocW(ocm.cGrtos.currentText()),ocm.id_kriteria)
-  try:
-   ocR.execute(ocx)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   ocm.ocF()
   ocm.oce()
  def ocg(ocm):
-  db=ocL(ocJ,ocM,ocT,ocS)
-  ocR=db.cursor()
-  ocx="delete from kriteria where id_kriteria = '%s'"% (ocm.id_kriteria)
-  try:
-   ocR.execute(ocx)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
-  ocm.ocF()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   ocm.oce()
  def ocF(ocm):
   ocm.txRmt.setText("")

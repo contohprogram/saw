@@ -83,16 +83,12 @@ class FrtuWED(wel):
   weK=weg.fetchall()
   if weK:
    if weD.eWWTRE.text()==weD.RTOide.text():
-    web=weQ(wei,wes,weP,weB)
-    weh=web.cursor()
-    wex="update login set password = '%s'                              where username = '%s'"% (weD.eWWTRE.text(),weS)
-    try:
-     weh.execute(wex)
-     web.commit()
-    except:
-     web.rollback()
-    web.close()
-    weD.close()
+    weN = wek()
+    weN.setIcon(wek.Information)
+    weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+    weN.setWindowTitle("Peringatan")
+    weN.setStandardButtons(wek.Ok)
+    wer = weN.exec_()
    else:
     weN=wek()
     weN.setIcon(wek.Information)

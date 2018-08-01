@@ -5,6 +5,7 @@ sPJ=str
 sPg=print
 sPG=int
 sPQ=QtWidgets.QApplication
+wek=QtWidgets.QMessageBox
 sPd=QtWidgets.QTableWidgetItem
 sPm=QtWidgets.QPushButton
 sPt=QtWidgets.QTableWidget
@@ -106,39 +107,30 @@ class FGGhrts(sPb):
   sPy.tNNP.setText(sPy.AttrbT.item(sPG(sPX),1).text())
   sPy.dtPPr.setText(sPy.AttrbT.item(sPG(sPX),2).text())
  def sPT(sPy):
-  db=sPB(sPz,sPe,sPw,sPx)
-  sPY=db.cursor()
-  sPU="insert into alternatif(nama_alternatif,             deskripsi)             values ('%s', '%s')"% (sPy.tNNP.text(),sPy.dtPPr.toPlainText())
-  try:
-   sPY.execute(sPU)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   sPy.sPA()
   sPy.sPC()
  def sPu(sPy):
-  db=sPB(sPz,sPe,sPw,sPx)
-  sPY=db.cursor()
-  sPU="update alternatif set nama_alternatif = '%s',             deskripsi = '%s' where id_alternatif = '%s'"% (sPy.tNNP.text(),sPy.dtPPr.toPlainText(),sPy.id_alternatif)
-  try:
-   sPY.execute(sPU)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   sPy.sPA()
   sPy.sPC()
  def sPR(sPy):
-  db=sPB(sPz,sPe,sPw,sPx)
-  sPY=db.cursor()
-  sPU="delete from alternatif where id_alternatif = '%s'"% (sPy.id_alternatif)
-  try:
-   sPY.execute(sPU)
-   db.commit()
-  except:
-   db.rollback()
-  db.close()
+  weN = wek()
+  weN.setIcon(wek.Information)
+  weN.setText("Demo Version, Tidak Bisa Insert, Update, Delete")
+  weN.setWindowTitle("Peringatan")
+  weN.setStandardButtons(wek.Ok)
+  wer = weN.exec_()
   sPy.sPA()
   sPy.sPC()
  def sPA(sPy):
